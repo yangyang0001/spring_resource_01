@@ -4,16 +4,15 @@ import java.lang.reflect.Proxy;
 
 /**
  * User: YANG
- * Date: 2019/5/19-22:16
+ * Date: 2019/5/20-10:54
  * Description: No Description
  */
 public class TestFindLove {
 
     public static void main(String[] args){
-        System.getProperties().setProperty("sun.misc.ProxyGenerator.saveGeneratedFiles", "true");
         MeiPo meiPo = new MeiPo(new Yang());
-        PersonInterface personInterface =
-                (PersonInterface) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), Yang.class.getInterfaces(), meiPo);
+        Class<?>[] interfaces = {PersonInterface.class};
+        PersonInterface personInterface = (PersonInterface) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(), interfaces, meiPo);
         personInterface.findLove();
     }
 }
