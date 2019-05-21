@@ -1,11 +1,6 @@
 
 package com.inspur.test;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
-
 public class TestObject {
 	
 	public static void main(String[] args) throws Exception{

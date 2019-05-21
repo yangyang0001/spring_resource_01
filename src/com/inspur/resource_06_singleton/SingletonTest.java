@@ -8,6 +8,6 @@ package com.inspur.resource_06_singleton;
 public class SingletonTest {
 
     public static void main(String[] args){
-        Singleton.getInstance();
+        Singleton.doSomething();
     }
 }
